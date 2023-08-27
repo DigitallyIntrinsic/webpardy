@@ -49,8 +49,8 @@ function getQuestion() {
 function questionClick() {
     // Did user guess the correct answer?
     if (this.value !== questions[currentQuestionIndex].answer) {
-        // IF not, remove an extra 12 seconds from the timer.
-        time -= 12;
+        // IF not, remove an extra 15 seconds from the timer.
+        time -= 15;
 
         if (time < 0) {
             time = 0;
