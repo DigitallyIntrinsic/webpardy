@@ -100,11 +100,11 @@ function quizEnd() {
 
 function ClockTimer() {
     // Update the timer.
-    timeLeft--;
-    timerEl.textContent = timeLeft;
+    time--;
+    timerEl.textContent = time;
 
     // Is the user out of time? This will check that.
-    if (timeLeft <= 0) {
+    if (time <= 0) {
         quizEnd();
     }
 }
