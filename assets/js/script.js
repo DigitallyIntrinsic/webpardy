@@ -46,3 +46,23 @@ function getQuestion() {
     };
 }
 
+function questionClick() {
+    // Did user guess the correct answer?
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        // IF not, remove an extra 12 seconds from the timer.
+        timeLeft -= 12;
+
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
+
+        timerEl.textContent = timeLeft;
+        feedbackEl.textContent = 'Incorrect!';
+        feedbackEl.style.color ='red';
+        feedbackEl.style.fontSize = '300%';
+    } else {
+        feedbackEl.textContent = 'Correct!';
+        feedbackEl.style.color = 'green';
+        feedbackEl.style.fontSize = '300%';
+    }
+}
