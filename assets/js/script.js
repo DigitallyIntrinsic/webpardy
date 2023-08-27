@@ -55,7 +55,7 @@ function questionClick() {
         if (timeLeft < 0) {
             timeLeft = 0;
         }
-
+        // This puts the new time on the timer.
         timerEl.textContent = timeLeft;
         feedbackEl.textContent = 'Incorrect!';
         feedbackEl.style.color ='red';
@@ -65,4 +65,10 @@ function questionClick() {
         feedbackEl.style.color = 'green';
         feedbackEl.style.fontSize = '300%';
     }
+
+    // This will give the answer feedback to the user.
+    feedbackEl.setAttribute('class', 'feedback');
+    setTimeout(function () {
+        feedbackEl.setAttribute('class', 'feedback hide');
+    }, 1000);
 }
