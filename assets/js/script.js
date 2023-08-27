@@ -25,3 +25,15 @@ function startQuiz() {
     timerEl.textContent = timeLeft;
     getQuestion();
 }
+
+function getQuestion() {
+    // Get the current question from the questions array.
+    let currentQuestion = questions[currentQuestionIndex];
+
+    // Update the text of the question screen with the current question.
+    let titleEl = document.getElementById('question-title');
+    titleEl.textContent = currentQuestion.question;
+
+    // Clear out old choices.
+    choicesEl.innerHTML = '';
+}
