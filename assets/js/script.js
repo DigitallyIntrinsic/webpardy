@@ -58,7 +58,7 @@ function questionClick() {
         // This puts the new time on the timer.
         timerEl.textContent = timeLeft;
         feedbackEl.textContent = 'Incorrect!';
-        feedbackEl.style.color ='red';
+        feedbackEl.style.color = 'red';
         feedbackEl.style.fontSize = '300%';
     } else {
         feedbackEl.textContent = 'Correct!';
@@ -79,4 +79,21 @@ function questionClick() {
     } else {
         getQuestion();
     }
+}
+
+function quizEnd() {
+    // Stop the timer.
+    clearInterval(timeLeft);
+
+    // Show the end screen.
+    let endScreenEl = document.getElementById('end-screen');
+    endScreenEl.removeAttribute('class');
+
+    // Show the final score.
+    let finalScoreEl = document.getElementById('final-score');
+    finalScoreEl.textContent = 'Your final score is:' + timeLeft;
+
+    // Hide the questions screen.
+    questionsEl.setAttribute('class', 'hide');
+
 }
