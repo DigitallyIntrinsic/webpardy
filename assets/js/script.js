@@ -1,7 +1,7 @@
 // These are the DOM elements we'll need to interact with.
 
 const questionsEl = document.querySelector('#questions');
-const timerEl = document.querySelector('#timer');
+const timerEl = document.querySelector('#time');
 const choicesEl = document.querySelector('#choices');
 const submitBtn = document.querySelector('#submit');
 const startBtn = document.querySelector('#start');
@@ -9,20 +9,20 @@ const intialsEl = document.querySelector('#intials');
 const feedbackEl = document.querySelector('#feedback');
 
 // There are the variables we'll need to keep track of for when the quiz is active.
-const currentQuestionIndex = 0;
-const time = questions.length * 15;
-const timeLeft = time;
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
 
 
 function startQuiz() {
     // Hide the start screen, then unhide the questions screen.
-    let startScreenEl = document.getElementById('start');
-    startScreenEl.setAttribute('class', 'hide');
-    questionsEl.removeAttribute('class');
+    let startScreenEl = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
+    questionsEl.removeAttribute("class");
 
     // Start the timer. Remember that this is in milliseconds!!
-    timeLeft = setInterval(ClockTimer, 1000);
-    timerEl.textContent = timeLeft;
+    timerId = setInterval(ClockTimer, 1000);
+    timerEl.textContent = time;
     getQuestion();
 }
 
@@ -83,7 +83,7 @@ function questionClick() {
 
 function quizEnd() {
     // Stop the timer.
-    clearInterval(timeLeft);
+    clearInterval(timerId);
 
     // Show the end screen.
     let endScreenEl = document.getElementById('end-screen');
