@@ -38,12 +38,20 @@ function getQuestion() {
     choicesEl.innerHTML = '';
 
     // Loop through each choice
-    for (let i = 0; i < currentQuestion.choices.length; i++) {
-        let choiceEl = document.createElement('button');
-        choiceEl.textContent = currentQuestion.choices[i];
-        choiceEl.setAttribute('class', 'choice');
-        choicesEl.appendChild(choiceEl);
-    };
+    currentQuestion.choices.forEach(function (choice, i) {
+        // create new button for each choice
+        var choiceNode = document.createElement("button");
+        choiceNode.setAttribute("class", "choice");
+        choiceNode.setAttribute("value", choice);
+
+        choiceNode.textContent = i + 1 + ". " + choice;
+
+        // attach click event listener to each choice
+        choiceNode.onclick = questionClick;
+
+        // display on the page
+        choicesEl.appendChild(choiceNode);
+    });
 }
 
 function questionClick() {
