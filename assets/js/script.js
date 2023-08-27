@@ -32,7 +32,7 @@ function getQuestion() {
 
     // Update the text of the question screen with the current question.
     let titleEl = document.getElementById('question-title');
-    titleEl.textContent = currentQuestion.question;
+    titleEl.textContent = currentQuestion.title;
 
     // Clear out old choices.
     choicesEl.innerHTML = '';
