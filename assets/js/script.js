@@ -50,13 +50,13 @@ function questionClick() {
     // Did user guess the correct answer?
     if (this.value !== questions[currentQuestionIndex].answer) {
         // IF not, remove an extra 12 seconds from the timer.
-        timeLeft -= 12;
+        time -= 12;
 
-        if (timeLeft < 0) {
-            timeLeft = 0;
+        if (time < 0) {
+            time = 0;
         }
         // This puts the new time on the timer.
-        timerEl.textContent = timeLeft;
+        timerEl.textContent = time;
         feedbackEl.textContent = 'Incorrect!';
         feedbackEl.style.color = 'red';
         feedbackEl.style.fontSize = '300%';
@@ -91,7 +91,7 @@ function quizEnd() {
 
     // Show the final score.
     let finalScoreEl = document.getElementById('final-score');
-    finalScoreEl.textContent = 'Your final score is:' + timeLeft;
+    finalScoreEl.textContent = 'Your final score is:' + time;
 
     // Hide the questions screen.
     questionsEl.setAttribute('class', 'hide');
@@ -119,7 +119,7 @@ function saveHighScore() {
 
         // If they do exist, add the user's initials to the high scores array.
         let newScore = {
-            score: timeLeft,
+            score: time,
             initials: initials
         };
 
