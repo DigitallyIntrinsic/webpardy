@@ -108,3 +108,25 @@ function ClockTimer() {
         quizEnd();
     }
 }
+
+function saveHighScore() {
+    // Get the initials from the user.
+    let initials = intialsEl.value.trim();
+
+    // Get the high scores from local storage, if they don't exist, create an empty array.
+    if (initials === '') {
+        let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+        // If they do exist, add the user's initials to the high scores array.
+        let newScore = {
+            score: timeLeft,
+            initials: initials
+        };
+
+        // Save the initials to local storage. Then redirect to the highscores.html page.
+
+        highScores.push(newScore);
+        window.localStorage.setItem('highScores', JSON.stringify(highScores));
+        window.location.href = 'highscores.html';
+    }
+}
