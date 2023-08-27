@@ -136,3 +136,9 @@ function checkForEnter(event) {
         saveHighScore();
     }
 }
+
+submitBtn.onclick = saveHighScore;
+
+startBtn.onclick = startQuiz;
+
+intialsEl.onkeyup = checkForEnter;
