@@ -20,3 +20,12 @@ body {
     top: 10px;
     left: 10px;
 }
+
+.feedback {
+    font-style: normal;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: aqua;
+    border-top: 2px solid grey;
+}
