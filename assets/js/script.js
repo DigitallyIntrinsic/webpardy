@@ -5,7 +5,7 @@ const timerEl = document.querySelector('#time');
 const choicesEl = document.querySelector('#choices');
 const submitBtn = document.querySelector('#submit');
 const startBtn = document.querySelector('#start');
-const intialsEl = document.querySelector('#intials');
+const initialsEl = document.querySelector('#intials');
 const feedbackEl = document.querySelector('#feedback');
 
 // There are the variables we'll need to keep track of for when the quiz is active.
@@ -149,4 +149,4 @@ submitBtn.onclick = saveHighScore;
 
 startBtn.onclick = startQuiz;
 
-// intialsEl.onkeyup = checkForEnter;
+initialsEl.onkeyup = checkForEnter;
