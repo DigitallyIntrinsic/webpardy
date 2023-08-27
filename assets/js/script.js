@@ -21,7 +21,7 @@ function startQuiz() {
     questionsEl.removeAttribute('class');
 
     // Start the timer. Remember that this is in milliseconds!!
-    timeLeft = setInterval(decrementTime, 1000);
+    timeLeft = setInterval(ClockTimer, 1000);
     timerEl.textContent = timeLeft;
     getQuestion();
 }
@@ -96,4 +96,15 @@ function quizEnd() {
     // Hide the questions screen.
     questionsEl.setAttribute('class', 'hide');
 
+}
+
+function ClockTimer() {
+    // Update the timer.
+    timeLeft--;
+    timerEl.textContent = timeLeft;
+
+    // Is the user out of time? This will check that.
+    if (timeLeft <= 0) {
+        quizEnd();
+    }
 }
