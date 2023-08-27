@@ -13,3 +13,8 @@ function printHighScores() {
         olEl.appendChild(liTag);
     });
 }
+
+function clearHighScores() {
+    localStorage.removeItem("highScores");
+    window.location.reload();
+}
