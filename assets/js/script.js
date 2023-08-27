@@ -36,4 +36,13 @@ function getQuestion() {
 
     // Clear out old choices.
     choicesEl.innerHTML = '';
+
+    // Loop through each choice
+    for (let i = 0; i < currentQuestion.choices.length; i++) {
+        let choiceEl = document.createElement('button');
+        choiceEl.textContent = currentQuestion.choices[i];
+        choiceEl.setAttribute('class', 'choice');
+        choicesEl.appendChild(choiceEl);
+    };
 }
+
