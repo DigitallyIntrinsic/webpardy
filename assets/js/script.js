@@ -14,3 +14,14 @@ const time = questions.length * 15;
 const timeLeft = time;
 
 
+function startQuiz() {
+    // Hide the start screen, then unhide the questions screen.
+    let startScreenEl = document.getElementById('#start-screen');
+    startScreenEl.setAttribute('class', 'hide');
+    questionsEl.removeAttribute('class');
+
+    // Start the timer. Remember that this is in milliseconds!!
+    timeLeft = setInterval(decrementTime, 1000);
+    timerEl.textContent = timeLeft;
+    getQuestion();
+}
