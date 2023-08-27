@@ -64,3 +64,18 @@ button:hover {
     background-color: green;
     color: white;
 }
+
+.choices button {
+    display: block;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
+
