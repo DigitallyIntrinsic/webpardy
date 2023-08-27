@@ -16,7 +16,7 @@ const timeLeft = time;
 
 function startQuiz() {
     // Hide the start screen, then unhide the questions screen.
-    let startScreenEl = document.getElementById('#start-screen');
+    let startScreenEl = document.getElementById('start');
     startScreenEl.setAttribute('class', 'hide');
     questionsEl.removeAttribute('class');
 
@@ -132,7 +132,7 @@ function saveHighScore() {
 }
 
 function checkForEnter(event) {
-    if (event.keyCode === "Enter") {
+    if (event.key === "Enter") {
         saveHighScore();
     }
 }
@@ -141,4 +141,4 @@ submitBtn.onclick = saveHighScore;
 
 startBtn.onclick = startQuiz;
 
-intialsEl.onkeyup = checkForEnter;
+// intialsEl.onkeyup = checkForEnter;
