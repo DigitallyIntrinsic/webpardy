@@ -71,4 +71,12 @@ function questionClick() {
     setTimeout(function () {
         feedbackEl.setAttribute('class', 'feedback hide');
     }, 1000);
+
+    // Goes to the next question.
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
 }
