@@ -8,4 +8,9 @@ const startBtn = document.querySelector('#start');
 const intialsEl = document.querySelector('#intials');
 const feedbackEl = document.querySelector('#feedback');
 
-console.log('Is there anybody out there?');
+// There are the variables we'll need to keep track of for when the quiz is active.
+const currentQuestionIndex = 0;
+const time = questions.length * 15;
+const timeLeft = time;
+
+
