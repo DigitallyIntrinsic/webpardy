@@ -79,3 +79,11 @@ ol {
     overflow: auto;
 }
 
+li {
+    padding: 5px;
+    list-style-type: decimal inside none;
+}
+
+li:nth-child(odd) {
+    background-color: aquamarine;
+
