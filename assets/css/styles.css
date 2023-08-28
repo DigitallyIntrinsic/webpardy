@@ -7,6 +7,11 @@ body {
     max-width: 600px;
 }
 
+.wrapper h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
 .hide {
     display: none;
 }
