@@ -119,7 +119,7 @@ function ClockTimer() {
 
 function saveHighScore() {
     // Get the initials from the user.
-    let initials = intialsEl.value.trim();
+    let initials = initialsEl.value.trim();
 
     // Get the high scores from local storage, if they don't exist, create an empty array.
     if (initials === '') {
