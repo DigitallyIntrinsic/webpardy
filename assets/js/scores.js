@@ -8,7 +8,7 @@ function printHighScores() {
         return b.score - a.score;
     });
 
-    highScores.forEach(function(score) {
+    highScores.forEach(function (score) {
 
         // Create a new li tag for each high score
         let liTag = document.createElement("li");
