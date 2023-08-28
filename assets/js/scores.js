@@ -1,7 +1,7 @@
 function printHighScores() {
 
     // Get the high scores from local storage or the array
-    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
     // Sort the scores in descending order
     highScores.sort(function (a, b) {
@@ -15,13 +15,13 @@ function printHighScores() {
         liTag.textContent = score.initials + " - " + score.score;
 
         // Append the new li tag to the ol element and display on page
-        let olEl = document.getElementById("high-scores");
+        let olEl = document.getElementById("highscores");
         olEl.appendChild(liTag);
     });
 }
 
 function clearHighScores() {
-    localStorage.removeItem("highScores");
+    window.localStorage.removeItem("highscores");
     window.location.reload();
 }
 
