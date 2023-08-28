@@ -1,12 +1,12 @@
 // These are the DOM elements we'll need to interact with.
 
-const questionsEl = document.querySelector('#questions');
-const timerEl = document.querySelector('#time');
-const choicesEl = document.querySelector('#choices');
-const submitBtn = document.querySelector('#submit');
-const startBtn = document.querySelector('#start');
-const initialsEl = document.querySelector('#initials');
-const feedbackEl = document.querySelector('#feedback');
+const questionsEl = document.querySelector("#questions");
+const timerEl = document.querySelector("#time");
+const choicesEl = document.querySelector("#choices");
+const submitBtn = document.querySelector("#submit");
+const startBtn = document.querySelector("#start");
+const initialsEl = document.querySelector("#initials");
+const feedbackEl = document.querySelector("#feedback");
 
 // There are the variables we'll need to keep track of for when the quiz is active.
 var currentQuestionIndex = 0;
@@ -31,16 +31,16 @@ function getQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
 
     // Update the text of the question screen with the current question.
-    let titleEl = document.getElementById('question-title');
+    let titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
 
     // Clear out old choices.
-    choicesEl.innerHTML = '';
+    choicesEl.innerHTML = "";
 
     // Loop through each choice
-    currentQuestion.choices.forEach(function (choice, i) {
+    currentQuestion.choices.forEach(function(choice, i) {
         // create new button for each choice
-        var choiceNode = document.createElement("button");
+        let choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
         choiceNode.setAttribute("value", choice);
 
@@ -76,7 +76,7 @@ function questionClick() {
 
     // This will give the answer feedback to the user.
     feedbackEl.setAttribute('class', 'feedback');
-    setTimeout(function () {
+    setTimeout(function() {
         feedbackEl.setAttribute('class', 'feedback hide');
     }, 1000);
 
@@ -99,7 +99,7 @@ function quizEnd() {
 
     // Show the final score.
     let finalScoreEl = document.getElementById('final-score');
-    finalScoreEl.textContent = 'Your final score is:' + time;
+    finalScoreEl.textContent = time;
 
     // Hide the questions screen.
     questionsEl.setAttribute('class', 'hide');
@@ -122,8 +122,8 @@ function saveHighScore() {
     let initials = initialsEl.value.trim();
 
     // Get the high scores from local storage, if they don't exist, create an empty array.
-    if (initials === '') {
-        let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    if (initials !== "") {
+        let highScores = JSON.parse(window.localStorage.getItem('highScores')) || [];
 
         // If they do exist, add the user's initials to the high scores array.
         let newScore = {

@@ -25,8 +25,8 @@ var questions = [
         answer: "console log"
     },
     {
-        title: "You are an amazing developer.",
-        choices: ["You are an amazing developer.", "You are an amazing developer.", "You are an amazing developer.", "You are an amazing developer."],
-        answer: "You are an amazing developer."
-    }
+        title: "Inside which HTML element do we put the JavaScript?", 
+        choices: ["<script>", "<js>", "<javascript>", "<JS>"],
+        answer: "<script>"
+    },
 ];
