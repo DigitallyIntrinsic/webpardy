@@ -4,8 +4,6 @@
 
 
 ## Table of Contents: 
-- [Project: Web APIs: Code Quiz](#project-web-apis-code-quiz)
-  - [Table of Contents:](#table-of-contents)
   - [License:](#license)
   - [Description:](#description)
   - [Installation Instructions:](#installation-instructions)
