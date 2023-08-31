@@ -32,6 +32,6 @@ None at this time.
 
 ## Images:
 
-![Project Screenshot](./Assets/HomePage.png)
-![Project Screenshot](./Assets/QuestionEx.png)
-![Project Screenshot](./Assets/HoCPage.png)
+![Project Screenshot](./assets/HomePage.png)
+![Project Screenshot](./assets/QuestionEx.png)
+![Project Screenshot](./assets/HoCPage.png)
